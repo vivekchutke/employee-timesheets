@@ -1,0 +1,1 @@
+insert into employee(created, updated, dob, doj, first_name, last_name, password, phone_number, user_name) values(current_date,current_date,current_date, current_date,'Sona','Chutke','test123','9255795454','schutke');

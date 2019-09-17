@@ -1,0 +1,14 @@
+name: CFEmployeeTimeSheetService
+path: build/libs/cfemployeetimesheetservice-0.0.1-SNAPSHOT.jar
+
+buildpack: https://github.com/cloudfoundry/java-buildpack.git
+memory: 1G
+env:
+  spring_jpa_hibernate_ddl-auto: create
+  spring.security.user.name: ${vcap.services.my-cfcups-service.credentials.username}
+  spring.security.user.password: ${vcap.services.my-cfcups-service.credentials.password}
+
+services:
+#  - myEurekaServiceRegistry
+  - mySqlServer
+  - my-cfcups-service
